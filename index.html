@@ -2,44 +2,67 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Shubhi 💕</title>
+<title>Shubhi 💕 Aditya</title>
 
 <style>
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'Poppins', 'Comic Sans MS', cursive;
   overflow: hidden;
 }
 
 .container {
   text-align: center;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  max-width: 90%;
+}
+
+h1 {
+  font-size: 36px;
   color: #ff3366;
-  background: rgba(255,255,255,0.2);
-  padding: 30px;
-  border-radius: 20px;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #fff;
+  font-size: 18px;
 }
 
 button {
-  padding: 12px 25px;
+  padding: 14px 30px;
   font-size: 18px;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   cursor: pointer;
-  margin: 10px;
+  margin: 15px;
+  transition: 0.3s ease;
 }
 
 #yes {
   background: #ff4d6d;
   color: white;
+  box-shadow: 0 10px 20px rgba(255,77,109,0.5);
+}
+
+#yes:hover {
+  transform: scale(1.1);
 }
 
 #no {
-  background: #999;
+  background: #666;
   color: white;
   position: absolute;
 }
@@ -48,11 +71,11 @@ button {
   display: none;
   background: white;
   color: #ff4d6d;
-  padding: 25px;
-  border-radius: 20px;
-  font-size: 20px;
+  padding: 30px;
+  border-radius: 25px;
+  font-size: 22px;
   margin-top: 20px;
-  animation: pop 0.5s ease;
+  animation: pop 0.6s ease;
 }
 
 @keyframes pop {
@@ -62,13 +85,19 @@ button {
 
 .heart {
   position: absolute;
-  font-size: 24px;
+  font-size: 26px;
   animation: float 5s linear infinite;
 }
 
 @keyframes float {
   0% { transform: translateY(100vh); opacity: 1; }
   100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+footer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #fff;
 }
 </style>
 </head>
@@ -77,26 +106,34 @@ button {
 
 <div class="container">
   <h1>Hey Shubhi 💕</h1>
-  <h2>Aditya has a very serious question 😳</h2>
+  <h2>Aditya has something important 😳</h2>
   <p>Will you be my Valentine… forever? 💖</p>
 
   <button id="yes" onclick="yesClicked()">YES 💘</button>
   <button id="no" onmouseover="moveNo()">NO 🙈</button>
 
   <div id="popup">
-    YAYYY!!! 🥰💃  
+    🥹💖 SHE SAID YES 💖🥹  
     <br><br>
     Shubhi ❤️ Aditya  
     <br>
-    Forever Valentine 💞🌹
+    Forever & Always 💍🌹
   </div>
+
+  <footer>Made with ❤️ by Aditya</footer>
 </div>
+
+<!-- Background Music -->
+<audio id="loveSong">
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_48f5b78f36.mp3" type="audio/mpeg">
+</audio>
 
 <script>
 function yesClicked() {
   document.getElementById("popup").style.display = "block";
+  document.getElementById("loveSong").play();
 
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < 50; i++) {
     let heart = document.createElement("div");
     heart.className = "heart";
     heart.innerHTML = "❤️";
